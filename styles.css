@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  /* Primary */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  /* Neutral */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--pale-blue);
+  font-family: "Red Hat Display", sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+h1 {
+  margin-bottom: 15px;
+}
+
+p {
+  color: var(--desaturated-blue);
+}
+article {
+  display: flex;
+}
+.background-image {
+  height: 400px;
+  background: url("./images/pattern-background-mobile.svg") no-repeat
+    center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.btn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-change {
+  background-color: transparent;
+  color: var(--bright-blue);
+  text-decoration: underline;
+}
+.btn-change:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background-color: var(--bright-blue);
+  color: white;
+  padding: 15px;
+  width: 90%;
+  box-shadow: 0px 10px 20px 0px hsla(245, 75%, 52%, 0.604);
+}
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--dark-blue);
+  display: block;
+  margin: 20px auto;
+}
+.btn-secondary:hover {
+  color: var(--desaturated-blue);
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 450px;
+}
+.card img {
+  width: 100%;
+}
+
+#card-plan {
+  display: flex;
+  background: var(--very-pale-blue);
+  padding: 20px;
+  margin: 20px;
+  justify-content: space-between;
+  border-radius: 10px;
+  width: 90%;
+}
+#card-body {
+  margin: 30px 30px;
+  padding: 10px;
+}
+#card-dt {
+  margin-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .background-image {
+    background: url("./images/pattern-background-desktop.svg") no-repeat
+      center/cover;
+    height: 50vh;
+  }
+}
